@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/blockSet": {
+      "name": "/blockSet",
+      "lambdaFunction": "bloomBlockSet",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

@@ -1,9 +1,69 @@
 {
+  "api": {
+    "bloom": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "bloomBlockSet"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "bloomclassroom": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  },
   "function": {
     "bloomBlockSet": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_bloomBlockSet_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bloomBlockSet"
+        }
+      ]
+    },
+    "AMPLIFY_function_bloomBlockSet_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bloomBlockSet"
+        }
+      ]
     }
   }
 }

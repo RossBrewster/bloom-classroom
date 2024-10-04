@@ -9,11 +9,21 @@
       "UnauthRoleName": "amplify-bloomclassroom-dev-9b5c9-unauthRole",
       "StackName": "amplify-bloomclassroom-dev-9b5c9",
       "StackId": "arn:aws:cloudformation:us-west-2:093485936545:stack/amplify-bloomclassroom-dev-9b5c9/e4e2ce20-81a9-11ef-895b-029943c0d029",
-      "AmplifyAppId": "d207kjeam60l27"
+      "AmplifyAppId": "d207kjeam60l27",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-bloomclassroom-dev-9b5c9-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "function": {
-        "bloomBlockSet": {}
+        "bloomBlockSet": {
+          "deploymentBucketName": "amplify-bloomclassroom-dev-9b5c9-deployment",
+          "s3Key": "amplify-builds/bloomBlockSet-47644a6e374b30666650-build.zip"
+        }
+      },
+      "auth": {
+        "bloomclassroom": {}
+      },
+      "api": {
+        "bloom": {}
       }
     }
   }
